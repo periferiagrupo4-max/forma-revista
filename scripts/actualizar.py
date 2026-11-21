@@ -45,6 +45,29 @@ def entries(name,url):
         return out
     except Exception as ex:
         print("Aviso: fuente no disponible",name,ex);return []
+def traducir(texto, idioma="en"):
+    """Traduce títulos y sinopsis públicos mediante MyMemory (gratis, con cuota).
+    Nunca inventa traducciones: devuelve None cuando no puede traducir.
+    """
+    texto=(texto or "").strip()
+    if not texto:return None
+    if idioma=="es":return texto
+    if idioma not in ("en","fr","de","it","pt"):return None
+    # La API admite un máximo de 500 bytes por petición.
+    while len(texto.encode("utf-8"))>480:
+        texto=texto[:max(1,len(texto)-20)].rsplit(" ",1)[0]
+    try:
+        endpoint="https://api.mymemory.translated.net/get?"+urllib.parse.urlencode({"q":texto,"langpair":idioma+"|es"})
+        respuesta=json.loads(request(endpoint,timeout=14))
+        translated=html.unescape((respuesta.get("responseData") or {}).get("translatedText","")).strip()
+        if int(respuesta.get("responseStatus",0))!=200 or not translated:return None
+        if "MYMEMORY WARNING" in translated.upper() or "QUOTA" in translated.upper():return None
+        if translated.casefold()==texto.casefold():return None
+        return translated
+    except Exception as exc:
+        print("Traducción temporalmente no disponible:",type(exc).__name__)
+        return None
+
 def image(title):
     # No se utiliza una fotografía genérica solo por compartir palabras clave.
     # Las fotografías reales deben aprobarse para la noticia concreta, con licencia y autor.
@@ -70,7 +93,17 @@ def main():
         for n in oldedition.get("noticias",[]):
             if n.get("imagen_licenciada",{}).get("verificada_para_articulo") is True and n["imagen_licenciada"].get("correspondencia_url")==n["url"]:cache[n["url"]]=n["imagen_licenciada"]
     bytopic={}
+    anteriores={n.get("url"):n for e in old.get("ediciones",[]) for n in e.get("noticias",[])}
     for item in chosen:
+        # Los feeds de esta selección son medios publicados en inglés.
+        item["idioma_original"]="en"
+        item["titulo_original"]=item["titulo"]
+        item["resumen_original"]=item["resumen"]
+        anterior=anteriores.get(item["url"],{})
+        item["titulo_es"]=anterior.get("titulo_es") or traducir(item["titulo"],"en")
+        # Una sinopsis traducida solo se muestra si también existe título en español.
+        item["resumen_es"]=(anterior.get("resumen_es") or traducir(item["resumen"],"en")) if item["titulo_es"] else None
+        item["traduccion"]=anterior.get("traduccion","automática")
         topic=next((t for t in ("furniture","chair","textile","plastic","ceramic","robot","lighting","wood","3d printing","fashion") if t in item["titulo"].lower()),"industrial design")
         if item["url"] in cache:img=cache[item["url"]]
         elif topic in bytopic:img=bytopic[topic]
