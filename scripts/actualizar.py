@@ -46,24 +46,10 @@ def entries(name,url):
     except Exception as ex:
         print("Aviso: fuente no disponible",name,ex);return []
 def image(title):
-    # Se permite solo fotografía ilustrativa con licencia abierta comprobada; no se reutiliza la foto RSS.
-    term=next((t for t in ("furniture","chair","textile","plastic","ceramic","robot","lighting","wood","3d printing","fashion") if t in title.lower()),"industrial design")
-    api="https://commons.wikimedia.org/w/api.php"
-    params={"action":"query","format":"json","generator":"search","gsrsearch":"filetype:bitmap "+term,"gsrnamespace":6,"gsrlimit":8,"prop":"imageinfo","iiprop":"url|extmetadata|size","iiurlwidth":900}
-    try:
-        data=json.loads(request(api+"?"+urllib.parse.urlencode(params),10))
-        for page in data.get("query",{}).get("pages",{}).values():
-            info=(page.get("imageinfo") or [{}])[0];meta=info.get("extmetadata",{})
-            def m(key):return html.unescape(re.sub("<[^>]+>"," ",meta.get(key,{}).get("value",""))).strip()
-            license=m("LicenseShortName");licurl=m("LicenseUrl")
-            if license not in ("CC0","Public domain","CC BY 4.0","CC BY 3.0","CC BY 2.0","CC BY 2.5"):continue
-            url=info.get("thumburl") or info.get("url","");pageurl=info.get("descriptionurl","")
-            if not url.startswith("https://") or not pageurl.startswith("https://commons.wikimedia.org/"):continue
-            if not licurl.startswith("https://") and license!="Public domain":continue
-            if info.get("width",0)<650 or info.get("height",0)<350:continue
-            return {"url":url,"autor":m("Artist")[:150] or "Autor en Wikimedia Commons","licencia":license,"licencia_url":licurl or pageurl,"pagina":pageurl,"tipo":"Imagen ilustrativa de Wikimedia Commons; no corresponde necesariamente al proyecto"}
-    except Exception as ex:print("Aviso: imagen no disponible",ex)
-    return {"tipo":"Ilustración editorial original de FORMA","semilla":hashlib.sha256(title.encode()).hexdigest()[:12]}
+    # No se utiliza una fotografía genérica solo por compartir palabras clave.
+    # Las fotografías reales deben aprobarse para la noticia concreta, con licencia y autor.
+    return {"tipo":"Ilustración conceptual original de FORMA","semilla":hashlib.sha256(title.encode()).hexdigest()[:12]}
+
 def main():
     now=dt.datetime.now(dt.timezone.utc)
     try:old=json.loads(DEST.read_text(encoding="utf-8"))
@@ -82,7 +68,7 @@ def main():
     cache={}
     for oldedition in old.get("ediciones",[]):
         for n in oldedition.get("noticias",[]):
-            if n.get("imagen_licenciada"):cache[n["url"]]=n["imagen_licenciada"]
+            if n.get("imagen_licenciada",{}).get("verificada_para_articulo") is True and n["imagen_licenciada"].get("correspondencia_url")==n["url"]:cache[n["url"]]=n["imagen_licenciada"]
     bytopic={}
     for item in chosen:
         topic=next((t for t in ("furniture","chair","textile","plastic","ceramic","robot","lighting","wood","3d printing","fashion") if t in item["titulo"].lower()),"industrial design")
