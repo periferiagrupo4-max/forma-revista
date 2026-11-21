@@ -28,21 +28,52 @@ function artwork(item){
 }
 function makeVisual(item){
  const topic=temaVisual(item),seed=safeText(item.titulo);
- let h=0;for(const c of seed)h=((h<<5)-h+c.charCodeAt(0))|0;
- const shift=Math.abs(h)%110;
+ let h=2166136261;
+ for(const c of seed)h=Math.imul(h^c.charCodeAt(0),16777619)>>>0;
+ const variant=h%3;
  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
- svg.setAttribute('viewBox','0 0 800 500');svg.setAttribute('role','img');
- svg.setAttribute('aria-label','Ilustración conceptual original FORMA relacionada con '+topic.toLowerCase()+', no fotografía del proyecto');
- const patterns={
- 'MATERIALES':'<path d="M185 318 C215 110 440 87 520 231 S700 420 485 421 S155 445 185 318Z" fill="#D52D38"/><path d="M199 322 C244 180 422 140 509 245 S590 383 485 393" stroke="#F2D8CA" stroke-width="18" fill="none"/><circle cx="397" cy="266" r="47" fill="#1A1016"/>',
- 'MOBILIARIO':'<path d="M212 192 L558 159 L586 215 L248 248Z" fill="#D52D38"/><path d="M275 237 L255 427 M531 211 L556 423" stroke="#EBD1C1" stroke-width="32"/><path d="M245 170 L245 100 L299 100 L299 218" stroke="#D52D38" stroke-width="26" fill="none"/>',
- 'ARQUITECTURA':'<path d="M190 425 L190 145 L408 80 L408 425Z" fill="#B71331"/><path d="M408 425 L408 170 L625 210 L625 425Z" fill="#E4C6B8"/><path d="M252 180 V387 M324 150 V387 M464 228 V380 M545 248 V385" stroke="#271219" stroke-width="19"/>',
- 'MODA':'<path d="M351 99 Q400 142 449 99 L499 180 L455 217 L579 416 L223 416 L345 217 L300 180Z" fill="#CF2335"/><path d="M350 112 Q405 200 452 112 M349 219 Q396 298 444 220 M278 370 Q402 338 524 370" fill="none" stroke="#F2D8CA" stroke-width="9"/>',
- 'TECNOLOGÍA':'<path d="M240 340 L344 183 L469 281 L592 120" fill="none" stroke="#D9273D" stroke-width="58" stroke-linejoin="round"/><circle cx="240" cy="340" r="51" fill="#EDD0BE"/><circle cx="344" cy="183" r="42" fill="#180D15"/><circle cx="469" cy="281" r="44" fill="#F7D5C2"/><circle cx="592" cy="120" r="48" fill="#D9273D"/>',
- 'DISEÑO':'<rect x="195" y="95" width="300" height="290" rx="130" fill="#C91F35" transform="rotate(-17 345 240)"/><circle cx="473" cy="259" r="118" fill="none" stroke="#F6DBC9" stroke-width="24"/><path d="M290 410 L590 130" stroke="#160B12" stroke-width="26"/>'
+ svg.setAttribute('viewBox','0 0 800 500');
+ svg.setAttribute('role','img');
+ svg.setAttribute('aria-label','Ilustración editorial geométrica de FORMA sobre '+topic.toLowerCase()+'. No es fotografía del proyecto.');
+ const motifs={
+ 'MATERIALES':[
+ '<path d="M130 394 L216 104 402 168 558 75 661 361 447 420 298 344Z" fill="#D52D38"/><path d="M130 394 L402 168 661 361 M216 104 L447 420 M558 75 L298 344" fill="none" stroke="#F2D8CA" stroke-width="7"/><path d="M349 198 L500 137 559 300 410 359Z" fill="#230C18"/>',
+ '<path d="M116 338 L262 132 351 365 468 106 660 324 552 418 430 255 327 433 244 255 188 400Z" fill="#D32B3B"/><path d="M140 371 L270 172 349 415 M462 129 L647 332" fill="none" stroke="#F4D8CC" stroke-width="13"/>',
+ '<path d="M151 126 H583 L662 206 V362 L554 414 H183 L121 346Z" fill="#F0CFC1"/><path d="M151 126 L326 236 583 126 662 206 407 329 121 346Z" fill="#BF1732"/><path d="M326 236 L407 329 554 414 M183 414 L326 236" stroke="#260B18" stroke-width="10" fill="none"/>'
+ ],
+ 'MOBILIARIO':[
+ '<path d="M186 195 L547 137 613 194 246 257Z" fill="#DD3344"/><path d="M249 256 L236 419 M546 208 L578 415" stroke="#EFD9CF" stroke-width="28"/><path d="M187 201 V105 L241 90 V252" stroke="#BF1732" stroke-width="30" fill="none"/>',
+ '<path d="M200 184 L581 184 613 251 181 251Z" fill="#D52D38"/><path d="M233 252 L222 409 M552 252 L583 409" stroke="#F2D8CA" stroke-width="28"/><path d="M295 156 L473 124 506 184 320 184Z" fill="#7C1028"/>',
+ '<path d="M258 109 L474 109 L521 308 299 308Z" fill="#F0D2C4"/><path d="M237 301 H597 V341 H220Z" fill="#C92238"/><path d="M274 338 L247 425 M555 338 L586 425" stroke="#C92238" stroke-width="26"/><path d="M337 135 L456 135" stroke="#250B18" stroke-width="14"/>'
+ ],
+ 'ARQUITECTURA':[
+ '<path d="M151 421 V134 L380 75 V421Z" fill="#C72037"/><path d="M380 421 V162 L630 226 V421Z" fill="#EBD0C3"/><path d="M203 167 V387 M280 149 V390 M435 218 V390 M520 242 V390" stroke="#260B18" stroke-width="22"/>',
+ '<path d="M129 397 L280 103 437 193 577 88 680 395Z" fill="#EBD0C3"/><path d="M283 103 L283 395 438 193 438 397 M577 88 L577 395" stroke="#A80F2D" stroke-width="18" fill="none"/><path d="M129 397 H680" stroke="#D92B3C" stroke-width="18"/>',
+ '<path d="M149 405 L149 221 269 221 269 112 490 112 490 191 638 191 638 405Z" fill="#C9203C"/><path d="M200 264 H235 M310 154 H448 M310 205 H448 M310 260 H448 M526 240 H607 M526 291 H607" stroke="#F1D5C8" stroke-width="24"/>'
+ ],
+ 'MODA':[
+ '<path d="M358 101 L442 101 498 185 459 223 579 405 220 405 341 223 301 185Z" fill="#D1283E"/><path d="M359 110 L401 171 442 110 M341 223 L461 223 M288 369 L511 369" fill="none" stroke="#F0D8CB" stroke-width="9"/>',
+ '<path d="M201 114 Q340 150 399 93 Q479 149 603 111 L553 222 627 397 190 397 256 226Z" fill="#EACCBF"/><path d="M205 116 L254 227 190 397 M603 111 L553 222 627 397 M399 93 V397" fill="none" stroke="#C9233B" stroke-width="12"/>',
+ '<path d="M228 93 L405 167 591 93 566 399 404 335 247 399Z" fill="#CA1E37"/><path d="M228 93 L404 335 591 93 M405 167 V335 M247 399 L405 167 566 399" fill="none" stroke="#F5D7C7" stroke-width="8"/>'
+ ],
+ 'TECNOLOGÍA':[
+ '<path d="M123 353 L265 165 391 289 539 116 666 238" stroke="#D83249" stroke-width="42" fill="none" stroke-linejoin="bevel"/><rect x="99" y="326" width="49" height="49" fill="#F1D8CC"/><rect x="241" y="141" width="49" height="49" fill="#260B18" stroke="#F1D8CC" stroke-width="5"/><rect x="367" y="266" width="49" height="49" fill="#F1D8CC"/><rect x="516" y="93" width="49" height="49" fill="#260B18" stroke="#F1D8CC" stroke-width="5"/>',
+ '<path d="M160 130 H361 V328 H160Z M439 183 H637 V404 H439Z" fill="#CD243B"/><path d="M361 231 H439 M261 328 V404 H537" stroke="#F2D8CA" stroke-width="17" fill="none"/><path d="M210 181 H311 V277 H210Z M488 231 H586 V355 H488Z" fill="#260B18"/>',
+ '<path d="M193 362 L283 132 L403 311 519 111 623 356Z" fill="#D52D38"/><path d="M193 362 L403 311 283 132 M403 311 L519 111 623 356" fill="none" stroke="#F2D8CA" stroke-width="13"/><rect x="378" y="281" width="53" height="53" fill="#260B18"/>'
+ ],
+ 'DISEÑO':[
+ '<path d="M164 375 L283 94 411 267 581 105 676 370 466 426Z" fill="#C92037"/><path d="M283 94 L466 426 M411 267 L676 370" stroke="#F3D7C8" stroke-width="12"/>',
+ '<rect x="174" y="116" width="203" height="267" transform="rotate(-14 275 249)" fill="#D52D38"/><path d="M389 102 L617 189 502 402 274 315Z" fill="none" stroke="#F2D8CA" stroke-width="23"/><path d="M194 420 L642 89" stroke="#290D19" stroke-width="22"/>',
+ '<path d="M135 142 L382 96 671 227 430 416 159 346Z" fill="#F0D3C8"/><path d="M135 142 L430 416 671 227 M382 96 L159 346" stroke="#BF1834" stroke-width="19" fill="none"/>'
+ ]
  };
- const motif=patterns[topic];
- svg.innerHTML='<rect width="800" height="500" fill="#260B18"/><rect x="20" y="20" width="760" height="460" fill="none" stroke="#794254" stroke-width="2"/><circle cx="'+(550+shift)+'" cy="205" r="190" fill="#790924" opacity=".68"/>'+motif+'<path d="M0 447 H800" stroke="#F0D9D0" opacity=".5"/><text x="37" y="55" fill="#F0D9D0" font-family="Arial,sans-serif" font-size="17" letter-spacing="5">FORMA / OBSERVATORIO</text><text x="40" y="472" fill="#FFF3E6" font-family="Arial,sans-serif" font-size="23" font-weight="bold" letter-spacing="3">'+topic+'</text><text x="745" y="467" text-anchor="end" fill="#F0D9D0" font-family="Arial,sans-serif" font-size="14">ESTUDIO VISUAL</text>';
+ const motif=(motifs[topic]||motifs['DISEÑO'])[variant];
+ const backgrounds=[
+ '<path d="M0 115 L800 0 V218 L0 394Z" fill="#790924"/><path d="M617 0 L800 0 V500 L724 500Z" fill="#4F0B20"/>',
+ '<path d="M0 0 H342 L87 500 H0Z" fill="#7C0E29"/><path d="M580 0 L800 0 V500 L339 500Z" fill="#5B0A22"/>',
+ '<rect x="0" y="0" width="800" height="260" fill="#681024"/><path d="M0 423 L800 170 V500 H0Z" fill="#400A1D"/>'
+ ];
+ svg.innerHTML='<rect width="800" height="500" fill="#260B18"/>'+backgrounds[variant]+'<rect x="20" y="20" width="760" height="460" fill="none" stroke="#B56B7B" stroke-width="2"/>'+motif+'<path d="M0 445 H800" stroke="#F0D9D0" opacity=".65"/><text x="37" y="54" fill="#F0D9D0" font-family="Arial,sans-serif" font-size="17" letter-spacing="5">FORMA / OBSERVATORIO</text><text x="40" y="473" fill="#FFF3E6" font-family="Arial,sans-serif" font-size="23" font-weight="bold" letter-spacing="3">'+topic+'</text><text x="745" y="466" text-anchor="end" fill="#F0D9D0" font-family="Arial,sans-serif" font-size="14">ESTUDIO VISUAL</text>';
  return svg;
 }
 function imageCredit(item){
