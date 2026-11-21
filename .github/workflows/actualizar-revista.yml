@@ -1,23 +1,36 @@
-name: Actualizar revista FORMA
+name: Actualizar y publicar revista FORMA
 on:
+  push:
+    branches: [main]
   schedule:
     - cron: '17 13 * * 1'
   workflow_dispatch:
 permissions:
   contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: forma-publishing
+  cancel-in-progress: false
 jobs:
-  actualizar:
+  actualizar-y-publicar:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Obtener revista
         uses: actions/checkout@v4
       - name: Preparar Python
+        if: github.event_name != 'push'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Generar edición
+        if: github.event_name != 'push'
         run: python scripts/actualizar.py
       - name: Guardar la edición
+        if: github.event_name != 'push'
         run: |
           if ! git diff --quiet -- data/ediciones.json; then
             git config user.name 'FORMA Bot'
@@ -26,3 +39,12 @@ jobs:
             git commit -m 'Actualización semanal FORMA'
             git push
           fi
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Empaquetar revista
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - name: Publicar edición
+        id: deployment
+        uses: actions/deploy-pages@v4
