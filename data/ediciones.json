@@ -130,16 +130,16 @@
         {
           "id": "blender-nodos-2026",
           "herramienta": "Blender",
-          "titulo": "Crear y modificar patrones con Geometry Nodes",
+          "titulo": "Crear paisajes paramétricos con Geometry Nodes",
           "creador": "Ryan King Art",
-          "fecha": "2026-07-05",
+          "fecha": "2026-05-14",
           "idioma": "en",
           "nivel": "Intermedio",
-          "duracion": "90 min aprox.",
-          "objetivo": "Configura una distribución paramétrica y cambia su densidad o escala.",
-          "reto": "Crea tres variaciones de un patrón para el relieve de un objeto o empaque.",
-          "url": "https://www.youtube.com/watch?v=188IeRY-ch0",
-          "video_id": "188IeRY-ch0",
+          "duracion": "30 min aprox.",
+          "objetivo": "Construye un terreno procedural con controles ajustables y variaciones del patrón.",
+          "reto": "Genera tres relieves diferentes y adapta uno como textura conceptual para un empaque.",
+          "url": "https://www.youtube.com/watch?v=5avrqTMYOCs",
+          "video_id": "5avrqTMYOCs",
           "tipo": "video"
         },
         {
@@ -198,8 +198,9 @@
           "duracion": "17 min",
           "objetivo": "Combina figuras vectoriales y texto para desarrollar un emblema.",
           "reto": "Diseña un emblema para una colección de objetos con dos colores y prepara una versión monocroma.",
-          "url": "https://designed.org/videos/beginner-logo-design-affinity-designer-2-tutorial",
-          "tipo": "video externo"
+          "url": "https://www.youtube.com/watch?v=B69bLxIODcg",
+          "tipo": "video",
+          "video_id": "B69bLxIODcg"
         }
       ],
       "tipo": "Selección automática de fuentes RSS; sin validación editorial humana"
