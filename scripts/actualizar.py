@@ -37,6 +37,7 @@ def entries(name,url):
                 link=a.get("href","") if a is not None else ""
             pub=getdate(val(it,"pubDate","a:published","a:updated","dc:date"))
             if not title or not link.startswith("https://") or pub is None:continue
+            if any(bad in title.lower() for bad in ("sponsored:", "advertorial", "weekly roundup", "among nine new products", "partner content", "paid partnership")):continue
             desc=val(it,"description","a:summary")
             score=sum(2 if x in title.lower() else 1 if x in desc.lower() else 0 for x in KEYWORDS)
             out.append({"titulo":title[:180],"medio":name,"url":link,"fecha":pub.date().isoformat(),"resumen":desc[:230],"_date":pub,"_score":score})
