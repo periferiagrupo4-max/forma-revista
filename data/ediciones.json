@@ -7,21 +7,6 @@
       "titulo": "Diseño, materia y futuro",
       "noticias": [
         {
-          "titulo": "Sponsored: MADE Bush Terminal: Building Brooklyn's Next Generation of Makers",
-          "medio": "Core77",
-          "url": "https://www.core77.com/posts/145889/MADE-Bush-Terminal-Building-Brooklyns-Next-Generation-of-Makers",
-          "fecha": "2026-11-18",
-          "resumen": "When Irving T. Bush started building his waterfront terminal in Sunset Park at the end of the 19th century, the idea was simple: put the warehouses, the factories, the rail and the piers in one place, and let goods move from produ",
-          "imagen_licenciada": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Cinepresa_con_Zoom_8mm_-_Concorso_Mainichi_Industrial_Design%2C_Yashica%2C_1960.jpg/960px-Cinepresa_con_Zoom_8mm_-_Concorso_Mainichi_Industrial_Design%2C_Yashica%2C_1960.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "autor": "Makio Hasuike",
-            "licencia": "CC BY 2.0",
-            "licencia_url": "https://creativecommons.org/licenses/by/2.0",
-            "pagina": "https://commons.wikimedia.org/wiki/File:Cinepresa_con_Zoom_8mm_-_Concorso_Mainichi_Industrial_Design,_Yashica,_1960.jpg",
-            "tipo": "Imagen ilustrativa de Wikimedia Commons; no corresponde necesariamente al proyecto"
-          }
-        },
-        {
           "titulo": "Recycled Plastic, 3D-Printed Into Public Outdoor Gym Equipment",
           "medio": "Core77",
           "url": "https://www.core77.com/posts/145922/Recycled-Plastic-3D-Printed-Into-Public-Outdoor-Gym-Equipment",
@@ -33,21 +18,6 @@
             "licencia": "CC BY 2.5",
             "licencia_url": "https://creativecommons.org/licenses/by/2.5",
             "pagina": "https://commons.wikimedia.org/wiki/File:Plastic-Dart.jpg",
-            "tipo": "Imagen ilustrativa de Wikimedia Commons; no corresponde necesariamente al proyecto"
-          }
-        },
-        {
-          "titulo": "Core77 Weekly Roundup (11-16-26 to 11-20-26)",
-          "medio": "Core77",
-          "url": "https://www.core77.com/posts/145907/Core77-Weekly-Roundup-11-16-26-to-11-20-26",
-          "fecha": "2026-11-20",
-          "resumen": "Here's what we looked at this week:  A progress-bar-style  Linear Clock , by engineer Johannes van Ginkel.     \n         SpaceX succeeds in recapturing not just the booster,  but the ship itself!          Clink : Industrial design",
-          "imagen_licenciada": {
-            "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Cinepresa_con_Zoom_8mm_-_Concorso_Mainichi_Industrial_Design%2C_Yashica%2C_1960.jpg/960px-Cinepresa_con_Zoom_8mm_-_Concorso_Mainichi_Industrial_Design%2C_Yashica%2C_1960.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-            "autor": "Makio Hasuike",
-            "licencia": "CC BY 2.0",
-            "licencia_url": "https://creativecommons.org/licenses/by/2.0",
-            "pagina": "https://commons.wikimedia.org/wiki/File:Cinepresa_con_Zoom_8mm_-_Concorso_Mainichi_Industrial_Design,_Yashica,_1960.jpg",
             "tipo": "Imagen ilustrativa de Wikimedia Commons; no corresponde necesariamente al proyecto"
           }
         },
