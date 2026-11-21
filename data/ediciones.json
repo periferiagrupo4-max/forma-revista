@@ -128,19 +128,78 @@
       ],
       "tutoriales": [
         {
-          "herramienta": "Affinity",
-          "titulo": "Aprender Affinity",
-          "url": "https://affinity.serif.com/en-us/learn/"
-        },
-        {
+          "id": "blender-nodos-2026",
           "herramienta": "Blender",
-          "titulo": "Tutoriales de modelado Blender",
-          "url": "https://www.blender.org/support/tutorials/"
+          "titulo": "Crear y modificar patrones con Geometry Nodes",
+          "creador": "Ryan King Art",
+          "fecha": "2026-07-05",
+          "idioma": "en",
+          "nivel": "Intermedio",
+          "duracion": "90 min aprox.",
+          "objetivo": "Configura una distribución paramétrica y cambia su densidad o escala.",
+          "reto": "Crea tres variaciones de un patrón para el relieve de un objeto o empaque.",
+          "url": "https://www.youtube.com/watch?v=188IeRY-ch0",
+          "video_id": "188IeRY-ch0",
+          "tipo": "video"
         },
         {
+          "id": "fusion-bloque-2026",
           "herramienta": "Fusion",
-          "titulo": "Aprender CAD paramétrico",
-          "url": "https://www.autodesk.com/learn/ondemand"
+          "titulo": "Modelar un bloque 3D con extrusión, vaciado y redondeos",
+          "creador": "Product Design Online",
+          "fecha": "2026-03-10",
+          "idioma": "en",
+          "nivel": "Inicial",
+          "duracion": "20 min aprox.",
+          "objetivo": "Utiliza bocetos, extrusión, patrón rectangular, Shell y Fillet.",
+          "reto": "Diseña una caja modular de 60 × 40 × 25 mm y crea una segunda versión cambiando parámetros.",
+          "url": "https://www.youtube.com/watch?v=4G2E_DqQteM",
+          "video_id": "4G2E_DqQteM",
+          "tipo": "video"
+        },
+        {
+          "id": "rhino-fachada-2026",
+          "herramienta": "Rhino / Grasshopper",
+          "titulo": "Construir una superficie con patrón paramétrico",
+          "creador": "Architutors",
+          "fecha": "2026-05-19",
+          "idioma": "en",
+          "nivel": "Intermedio",
+          "duracion": "15 min aprox.",
+          "objetivo": "Crea patrones paramétricos usando curvas atractoras y controla sus parámetros.",
+          "reto": "Convierte el patrón en un panel de ventilación de 20 × 20 cm, con dos grados de apertura.",
+          "url": "https://www.youtube.com/watch?v=RrQcN98w3j8",
+          "video_id": "RrQcN98w3j8",
+          "tipo": "video"
+        },
+        {
+          "id": "affinity-raw-2025",
+          "herramienta": "Affinity Photo",
+          "titulo": "Revelar una fotografía RAW con ajustes y máscaras",
+          "creador": "Practical Affinity",
+          "fecha": "2025-01-13",
+          "idioma": "en",
+          "nivel": "Intermedio",
+          "duracion": "Tutorial puntual",
+          "objetivo": "Mejora luz y color con superposiciones, máscaras y herramientas de revelado.",
+          "reto": "Edita una fotografía de un prototipo con dos zonas de exposición y compara el antes y después.",
+          "url": "https://www.youtube.com/watch?v=zmgLvaBsLcc",
+          "video_id": "zmgLvaBsLcc",
+          "tipo": "video"
+        },
+        {
+          "id": "affinity-logo-2025",
+          "herramienta": "Affinity Designer",
+          "titulo": "Crear un logotipo-emblema con vectores y texto",
+          "creador": "Design Made Simple",
+          "fecha": "2025-02-21",
+          "idioma": "en",
+          "nivel": "Inicial",
+          "duracion": "17 min",
+          "objetivo": "Combina figuras vectoriales y texto para desarrollar un emblema.",
+          "reto": "Diseña un emblema para una colección de objetos con dos colores y prepara una versión monocroma.",
+          "url": "https://designed.org/videos/beginner-logo-design-affinity-designer-2-tutorial",
+          "tipo": "video externo"
         }
       ],
       "tipo": "Selección automática de fuentes RSS; sin validación editorial humana"
