@@ -1,6 +1,244 @@
 {
-  "ultima_actualizacion": "2026-11-21T21:58:57.840065+00:00",
+  "ultima_actualizacion": "2026-11-23T14:30:47.788407+00:00",
   "ediciones": [
+    {
+      "id": "2026-11-23",
+      "publicada": "2026-11-23",
+      "titulo": "Diseño, materia y futuro",
+      "noticias": [
+        {
+          "titulo": "Recycled Plastic, 3D-Printed Into Public Outdoor Gym Equipment",
+          "medio": "Core77",
+          "url": "https://www.core77.com/posts/145922/Recycled-Plastic-3D-Printed-Into-Public-Outdoor-Gym-Equipment",
+          "fecha": "2026-11-17",
+          "resumen": "These outdoor  Gym Elements  are by  The New Raw , a Rotterdam-based design/fabrication studio. They comprise an outdoor gym placed along the Yellow Carpet, a 5km walking and running loop weaving through Rotterdam.        Gym Elem",
+          "idioma_original": "en",
+          "titulo_original": "Recycled Plastic, 3D-Printed Into Public Outdoor Gym Equipment",
+          "resumen_original": "These outdoor  Gym Elements  are by  The New Raw , a Rotterdam-based design/fabrication studio. They comprise an outdoor gym placed along the Yellow Carpet, a 5km walking and running loop weaving through Rotterdam.        Gym Elem",
+          "titulo_es": "Plástico reciclado convertido mediante impresión 3D en equipos de ejercicio al aire libre",
+          "resumen_es": "The New Raw, estudio de diseño y fabricación con sede en Róterdam, desarrolló elementos de ejercicio al aire libre instalados junto a Yellow Carpet, un recorrido urbano de cinco kilómetros para caminar y correr.",
+          "traduccion": "editorial",
+          "imagen_licenciada": {
+            "tipo": "Ilustración conceptual original de FORMA",
+            "semilla": "e2ee17a4a271"
+          }
+        },
+        {
+          "titulo": "mono-material 3D printed children’s shoe expands five sizes and adapts to foot shape",
+          "medio": "designboom",
+          "url": "https://www.designboom.com/technology/mono-material-3d-printed-childrens-shoe-five-sizes-foot-shape-fits-daniel-winter/",
+          "fecha": "2026-11-22",
+          "resumen": "designer daniel winter develops fits, a 3D printed shoe fabricated from 75A flexible filament whose articulating perimeter segments expand across five children’s sizes and adapt to adult foot shapes across a three-size range. \n Th",
+          "idioma_original": "en",
+          "titulo_original": "mono-material 3D printed children’s shoe expands five sizes and adapts to foot shape",
+          "resumen_original": "designer daniel winter develops fits, a 3D printed shoe fabricated from 75A flexible filament whose articulating perimeter segments expand across five children’s sizes and adapt to adult foot shapes across a three-size range. \n Th",
+          "titulo_es": "El zapato infantil impreso en 3D con un solo material se expande cinco tallas y se adapta a la forma del pie",
+          "resumen_es": "El diseñador Daniel Winter desarrolla Fits, un zapato impreso en 3D fabricado con filamento flexible 75A cuyos segmentos perimetrales articulados se expanden en cinco tallas infantiles y se adaptan a las formas de los pies de los adultos en una gama de tres tallas. \n Jue",
+          "traduccion": "automática",
+          "imagen_licenciada": {
+            "tipo": "Ilustración conceptual original de FORMA",
+            "semilla": "eaf28a34116d"
+          }
+        },
+        {
+          "titulo": "OMA Rethinks Retail Through Craft and Circular Design at Potato Head Bali",
+          "medio": "Design Milk",
+          "url": "https://design-milk.com/oma-good-times-general-store-potato-head-bali/",
+          "fecha": "2026-11-18",
+          "resumen": "Designed by OMA, Potato Head's Good Times General Store brings Balinese craftsmanship, circular design, and interactive workshops to the traditional retail experience",
+          "idioma_original": "en",
+          "titulo_original": "OMA Rethinks Retail Through Craft and Circular Design at Potato Head Bali",
+          "resumen_original": "Designed by OMA, Potato Head's Good Times General Store brings Balinese craftsmanship, circular design, and interactive workshops to the traditional retail experience",
+          "titulo_es": "OMA replantea el comercio minorista mediante la artesanía y el diseño circular en Potato Head Bali",
+          "resumen_es": "La tienda Good Times General Store, diseñada por OMA para Potato Head, integra artesanía balinesa, estrategias de diseño circular y talleres interactivos en la experiencia comercial.",
+          "traduccion": "editorial",
+          "imagen_licenciada": {
+            "tipo": "Ilustración conceptual original de FORMA",
+            "semilla": "eaf28a34116d"
+          }
+        },
+        {
+          "titulo": "Carolina Zimbalist pours bioplastic over silk for Emma Watson's LACMA Gala dress",
+          "medio": "Dezeen",
+          "url": "https://www.dezeen.com/2026/11/18/caroline-zimbalist-biomaterial-dress-emma-watson/",
+          "fecha": "2026-11-18",
+          "resumen": "Artist Carolina Zimbalist has co-created a biomaterial dress with actress Emma Watson, who wore it at the Los Angeles County Museum of Art's 15th annual Art+Film Gala. \n The post  Carolina Zimbalist pours bioplastic over silk for ",
+          "idioma_original": "en",
+          "titulo_original": "Carolina Zimbalist pours bioplastic over silk for Emma Watson's LACMA Gala dress",
+          "resumen_original": "Artist Carolina Zimbalist has co-created a biomaterial dress with actress Emma Watson, who wore it at the Los Angeles County Museum of Art's 15th annual Art+Film Gala. \n The post  Carolina Zimbalist pours bioplastic over silk for ",
+          "titulo_es": "Carolina Zimbalist aplica bioplástico sobre seda para el vestido de Emma Watson en la gala LACMA",
+          "resumen_es": "La artista Carolina Zimbalist colaboró en la creación de un vestido con biomateriales que Emma Watson llevó en la gala Art+Film del Museo de Arte del Condado de Los Ángeles.",
+          "traduccion": "editorial",
+          "imagen_licenciada": {
+            "tipo": "Ilustración conceptual original de FORMA",
+            "semilla": "e2ee17a4a271"
+          }
+        },
+        {
+          "titulo": "Furniture That Signified Social Change: The Curiously Enduring TV Tray",
+          "medio": "Core77",
+          "url": "https://www.core77.com/posts/145930/Furniture-That-Signified-Social-Change-The-Curiously-Enduring-TV-Tray",
+          "fecha": "2026-11-18",
+          "resumen": "For a young couple starting a family in the 20th century, you'd need to buy a house, and furniture to fill it. The types of furniture required were prescribed: A bed and dressers for the bedroom; a sofa, chairs and coffee table fo",
+          "idioma_original": "en",
+          "titulo_original": "Furniture That Signified Social Change: The Curiously Enduring TV Tray",
+          "resumen_original": "For a young couple starting a family in the 20th century, you'd need to buy a house, and furniture to fill it. The types of furniture required were prescribed: A bed and dressers for the bedroom; a sofa, chairs and coffee table fo",
+          "titulo_es": "Muebles que simbolizaron un cambio social: la curiosamente perdurable mesa auxiliar para TV",
+          "resumen_es": "En el siglo XX, una pareja joven que quisiera formar una familia tenía que comprar una casa y muebles para amueblarla. Se indicaban los tipos de muebles necesarios: una cama y cómodas para el dormitorio; un sofá, sillas y una mesa de centro para...",
+          "traduccion": "automática",
+          "imagen_licenciada": {
+            "tipo": "Ilustración conceptual original de FORMA",
+            "semilla": "2b25c52e69f1"
+          }
+        },
+        {
+          "titulo": "Using Laser Tube Cutting to Turn Pipe Stock Into Useful Objects",
+          "medio": "Core77",
+          "url": "https://www.core77.com/posts/145910/Using-Laser-Tube-Cutting-to-Turn-Pipe-Stock-Into-Useful-Objects",
+          "fecha": "2026-11-16",
+          "resumen": "Let's say you're an independent industrial designer, who'd like to design and sell their own objects. One challenge is that \"creating a new form often comes with real-world constraints—especially when custom tooling requires a hea",
+          "idioma_original": "en",
+          "titulo_original": "Using Laser Tube Cutting to Turn Pipe Stock Into Useful Objects",
+          "resumen_original": "Let's say you're an independent industrial designer, who'd like to design and sell their own objects. One challenge is that \"creating a new form often comes with real-world constraints—especially when custom tooling requires a hea",
+          "titulo_es": "Uso del corte por láser de tubos para convertir tubos en bruto en objetos útiles",
+          "resumen_es": "Imaginemos que eres un diseñador industrial independiente al que le gustaría diseñar y vender sus propios objetos. Uno de los desafíos es que «crear una nueva forma suele conllevar limitaciones del mundo real, especialmente cuando el utillaje personalizado requiere una gran...»",
+          "traduccion": "automática",
+          "imagen_licenciada": {
+            "tipo": "Ilustración conceptual original de FORMA",
+            "semilla": "eaf28a34116d"
+          }
+        },
+        {
+          "titulo": "florim stone broadens design possibilities with full-body technology and expressive material finishes",
+          "medio": "designboom",
+          "url": "https://www.designboom.com/design/florim-stone-full-body-technology-material-finishes/",
+          "fecha": "2026-11-23",
+          "resumen": "florim stone introduces DeepSoul technology to embed color and texture throughout selected porcelain slabs for uninterrupted edges, alongside tactile stone and marble finishes across the wider collection. \n The post  florim stone ",
+          "idioma_original": "en",
+          "titulo_original": "florim stone broadens design possibilities with full-body technology and expressive material finishes",
+          "resumen_original": "florim stone introduces DeepSoul technology to embed color and texture throughout selected porcelain slabs for uninterrupted edges, alongside tactile stone and marble finishes across the wider collection. \n The post  florim stone ",
+          "titulo_es": "Florim Stone amplía las posibilidades de diseño con la tecnología de masa teñida y acabados de materiales expresivos",
+          "resumen_es": "florim stone presenta la tecnología DeepSoul para incorporar color y textura en determinadas losas de gres porcelánico y conseguir bordes continuos, junto con acabados táctiles de piedra y mármol en toda la colección. \n La publicación  florim stone",
+          "traduccion": "automática",
+          "imagen_licenciada": {
+            "tipo": "Ilustración conceptual original de FORMA",
+            "semilla": "eaf28a34116d"
+          }
+        },
+        {
+          "titulo": "\"Sacred\" archaeological finds become raw materials for design in Ex Situ exhibition",
+          "medio": "Dezeen",
+          "url": "https://www.dezeen.com/2026/11/23/archaeology-design-ex-situ-exhibition/",
+          "fecha": "2026-11-23",
+          "resumen": "New objects made from mammoth bone, leather from the middle ages and stumps from a road built under Roman Emperor Hadrian feature in the Ex Situ project, set to be exhibited soon in The Hague. \n The post  \"Sacred\" archaeological f",
+          "idioma_original": "en",
+          "titulo_original": "\"Sacred\" archaeological finds become raw materials for design in Ex Situ exhibition",
+          "resumen_original": "New objects made from mammoth bone, leather from the middle ages and stumps from a road built under Roman Emperor Hadrian feature in the Ex Situ project, set to be exhibited soon in The Hague. \n The post  \"Sacred\" archaeological f",
+          "titulo_es": "Los hallazgos arqueológicos «sagrados» se convierten en materias primas para el diseño en la exposición Ex Situ",
+          "resumen_es": "El proyecto Ex Situ, que pronto se expondrá en La Haya, incluye nuevos objetos hechos con huesos de mamut, cuero de la Edad Media y tocones de una calzada construida bajo el mandato del emperador romano Adriano. \n La publicación  «Hallazgos arqueológicos “sagrados”»",
+          "traduccion": "automática",
+          "imagen_licenciada": {
+            "tipo": "Ilustración conceptual original de FORMA",
+            "semilla": "eaf28a34116d"
+          }
+        }
+      ],
+      "papers": [
+        {
+          "categoria": "UX",
+          "titulo": "Why You Only Need to Test with 5 Users",
+          "url": "https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/"
+        },
+        {
+          "categoria": "Sostenibilidad",
+          "titulo": "A New Textiles Economy",
+          "url": "https://www.ellenmacarthurfoundation.org/a-new-textiles-economy"
+        },
+        {
+          "categoria": "Moda",
+          "titulo": "A New Textiles Economy",
+          "url": "https://www.ellenmacarthurfoundation.org/a-new-textiles-economy"
+        }
+      ],
+      "tutoriales": [
+        {
+          "id": "affinity-raw-2025",
+          "herramienta": "Affinity Photo",
+          "titulo": "Revelar una fotografía RAW con ajustes y máscaras",
+          "creador": "Practical Affinity",
+          "fecha": "2025-01-13",
+          "idioma": "en",
+          "nivel": "Intermedio",
+          "duracion": "Tutorial puntual",
+          "objetivo": "Mejora luz y color con superposiciones, máscaras y herramientas de revelado.",
+          "reto": "Edita una fotografía de un prototipo con dos zonas de exposición y compara el antes y después.",
+          "url": "https://www.youtube.com/watch?v=zmgLvaBsLcc",
+          "video_id": "zmgLvaBsLcc",
+          "tipo": "video"
+        },
+        {
+          "id": "affinity-logo-2025",
+          "herramienta": "Affinity Designer",
+          "titulo": "Crear un logotipo-emblema con vectores y texto",
+          "creador": "Design Made Simple",
+          "fecha": "2025-02-21",
+          "idioma": "en",
+          "nivel": "Inicial",
+          "duracion": "17 min",
+          "objetivo": "Combina figuras vectoriales y texto para desarrollar un emblema.",
+          "reto": "Diseña un emblema para una colección de objetos con dos colores y prepara una versión monocroma.",
+          "url": "https://www.youtube.com/watch?v=B69bLxIODcg",
+          "tipo": "video",
+          "video_id": "B69bLxIODcg"
+        },
+        {
+          "id": "blender-nodos-2026",
+          "herramienta": "Blender",
+          "titulo": "Crear paisajes paramétricos con Geometry Nodes",
+          "creador": "Ryan King Art",
+          "fecha": "2026-05-14",
+          "idioma": "en",
+          "nivel": "Intermedio",
+          "duracion": "30 min aprox.",
+          "objetivo": "Construye un terreno procedural con controles ajustables y variaciones del patrón.",
+          "reto": "Genera tres relieves diferentes y adapta uno como textura conceptual para un empaque.",
+          "url": "https://www.youtube.com/watch?v=5avrqTMYOCs",
+          "video_id": "5avrqTMYOCs",
+          "tipo": "video"
+        },
+        {
+          "id": "fusion-bloque-2026",
+          "herramienta": "Fusion",
+          "titulo": "Modelar un bloque 3D con extrusión, vaciado y redondeos",
+          "creador": "Product Design Online",
+          "fecha": "2026-03-10",
+          "idioma": "en",
+          "nivel": "Inicial",
+          "duracion": "20 min aprox.",
+          "objetivo": "Utiliza bocetos, extrusión, patrón rectangular, Shell y Fillet.",
+          "reto": "Diseña una caja modular de 60 × 40 × 25 mm y crea una segunda versión cambiando parámetros.",
+          "url": "https://www.youtube.com/watch?v=4G2E_DqQteM",
+          "video_id": "4G2E_DqQteM",
+          "tipo": "video"
+        },
+        {
+          "id": "rhino-fachada-2026",
+          "herramienta": "Rhino / Grasshopper",
+          "titulo": "Construir una superficie con patrón paramétrico",
+          "creador": "Architutors",
+          "fecha": "2026-05-19",
+          "idioma": "en",
+          "nivel": "Intermedio",
+          "duracion": "15 min aprox.",
+          "objetivo": "Crea patrones paramétricos usando curvas atractoras y controla sus parámetros.",
+          "reto": "Convierte el patrón en un panel de ventilación de 20 × 20 cm, con dos grados de apertura.",
+          "url": "https://www.youtube.com/watch?v=RrQcN98w3j8",
+          "video_id": "RrQcN98w3j8",
+          "tipo": "video"
+        }
+      ],
+      "tipo": "Selección automática de fuentes RSS; sin validación editorial humana"
+    },
     {
       "id": "2026-11-16",
       "publicada": "2026-11-21",
